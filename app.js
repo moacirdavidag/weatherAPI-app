@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 const express = require("express");
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(PATH.join(__dirname, '/public')));
 
 
 const handlebars = require('express-handlebars');
