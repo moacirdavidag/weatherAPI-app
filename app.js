@@ -9,9 +9,11 @@ const PORT = process.env.PORT;
 const express = require("express");
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
+
 const handlebars = require('express-handlebars');
 
-app.use(express.static('public'));
 
 app.engine('.hbs', handlebars.engine({
     defaultLayout: 'main',
@@ -25,5 +27,10 @@ app.set('views', PATH.resolve(__dirname, 'views'));
 app.get("/", CONTROLLER.HOME);
 
 app.get("/clima", CONTROLLER.CLIMA);
+
+app.use((req, res, next) => {
+    res.status(404).send("Not Found");
+    next();
+})
 
 app.listen(PORT, () => console.log(`The server is running at http://localhost:${PORT}`));
