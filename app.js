@@ -13,14 +13,14 @@ const handlebars = require('express-handlebars');
 
 app.use(express.static('public'));
 
-app.set('view engine', 'handlebars');
-app.set('views', PATH.join(__dirname, './views'));
-
-
-app.engine('handlebars', handlebars.engine({
+app.engine('.hbs', handlebars.engine({
     defaultLayout: 'main',
     extname: '.hbs'
 }));
+
+app.set('view engine', '.hbs');
+app.set('views', PATH.resolve(__dirname, 'views'));
+
 
 app.get("/", CONTROLLER.HOME);
 

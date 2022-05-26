@@ -1,5 +1,5 @@
 const HOME = ((req, res) => {
-    res.status(200).render('home');
+    res.render('home');
 });
 
 const CLIMA = ((req, res) => {
