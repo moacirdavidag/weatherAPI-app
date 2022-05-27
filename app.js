@@ -1,28 +1,27 @@
 const CONTROLLER = require("./controllers/Controller");
 const PATH = require('path');
-
-require("dotenv").config();
-const API = process.env.API_KEY;
-const PORT = process.env.PORT;
-
-
 const express = require("express");
+const handlebars = require('express-handlebars');
+require("dotenv").config();
 const app = express();
 
-app.use(express.static(PATH.join(__dirname, '/public')));
+// Usando as variáveis de ambiente
 
+const PORT = process.env.PORT;
 
-const handlebars = require('express-handlebars');
+// Configurações do app
 
-
+app.set('view engine', '.hbs');
+app.set('views', PATH.resolve(__dirname, 'views'));
+app.use(express.static(__dirname + '/public'));
+app.use(express.json());
 app.engine('.hbs', handlebars.engine({
     defaultLayout: 'main',
     extname: '.hbs'
 }));
 
-app.set('view engine', '.hbs');
-app.set('views', PATH.resolve(__dirname, 'views'));
 
+// Rotas e middleware
 
 app.get("/", CONTROLLER.HOME);
 
