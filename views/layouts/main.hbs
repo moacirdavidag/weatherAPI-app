@@ -16,22 +16,17 @@
             <a href="/"><h1><i class="fa-solid fa-cloud" id="nuvemLogo"></i> WeatherApp</h1></a>
         </div>
         <div id="search">
-            <form action="/previsao" method="GET">
-                <input type="text" name="input_search" id="input_search" placeholder="Busque pelo nome da cidade">
-                <input type="button" id="input_search_button" value="Buscar">
+            <form action="/" method="GET">
+                <input type="text" name="cidade" id="input_search" placeholder="Busque pelo nome da cidade">
+                <input type="submit" id="input_search_button" value="Buscar">
             </form>
         </div>
-        <nav id="navigation_bar">
-            <ul>
-                <li><a href=""><i class="fa-solid fa-house"></i>INÍCIO</a></li>
-                <li><a href=""><i class="fa-solid fa-circle-info"></i>SOBRE</a></li>
-            </ul>
-        </nav>
     </header>
     {{{body}}}
     <script src="https://kit.fontawesome.com/df87a55f2a.js" crossorigin="anonymous"></script>
     <footer>
         Desenvolvido por <strong>Moacir David</strong>. API consumida: <a href="https://www.weatherapi.com/" target="_blank"><strong>Weather API</strong></a>
     </footer>
-    </body>
+    <script src="/public/scripts/script.js"></script>
+</body>
 </html>

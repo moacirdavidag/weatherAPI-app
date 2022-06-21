@@ -1,8 +1,8 @@
+require("dotenv").config();
 const CONTROLLER = require("./controllers/Controller");
 const PATH = require('path');
 const express = require("express");
 const handlebars = require('express-handlebars');
-require("dotenv").config();
 const app = express();
 
 // Usando as variáveis de ambiente
@@ -20,12 +20,10 @@ app.engine('.hbs', handlebars.engine({
     extname: '.hbs'
 }));
 
-
 // Rotas e middleware
-
 app.get("/", CONTROLLER.HOME);
 
-app.get("/clima", CONTROLLER.CLIMA);
+app.get("/:cidade", CONTROLLER.HOME);
 
 app.use((req, res, next) => {
     res.status(404).send("Not Found");

@@ -1,7 +1,20 @@
-{{!-- <div class="homeSearch">
-    <input type="text" name="searchCity" id="searchCity" placeholder="Digite o nome da cidade">
-</div> --}}
-
 <div class="weather">
-    
+    <div id="localInfo">
+        <h2 class="cityName">
+            {{cidade}}, {{pais}}
+        </h2>
+        <div class="icon_descr">
+            <img id="climaIcon" src="{{icone}}">
+            <p id="description">
+                {{descricao}}
+            </p>
+        </div>
+        <div class="info">
+            <p><span class="temp_info"><i class="fa-solid fa-temperature-empty"></i> Temperatura:</span> {{temperatura}} ºC</p>
+        </div>
+        <div class="info">
+            <p><span class="temp_info"><i class="fa-solid fa-droplet"></i> Umidade do ar:</span> {{umidade}} %</p>
+        </div>
+        <span class="update"><small>Última atualização em {{atualizacao}}</small></span>
+    </div>
 </div>
