@@ -120,6 +120,9 @@ header #search #input_search_button:hover {
 }
 
 .icon_descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     align-self: center;
 }
 
@@ -135,3 +138,8 @@ body footer {
     justify-content: center;
 }
 
+.error {
+    font-size: 1.5rem;
+    display: block;
+    margin: auto;
+}
