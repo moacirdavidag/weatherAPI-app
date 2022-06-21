@@ -2,8 +2,7 @@
 const HOME = ((req, res) => {
     let city = "Sao_Paulo";
     if(req.query.cidade) {
-        city = (req.query.cidade).normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-        ;
+        city = (req.query.cidade).replace("+", "_").normalize('NFD').replace(/[\u0300-\u036f]/g, "");   
     }
     const options = {
         method: "GET",
