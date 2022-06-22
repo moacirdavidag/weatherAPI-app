@@ -9,6 +9,23 @@ const HOME = ((req, res) => {
         mode: 'cors',
         cache: 'default'
     }
+<<<<<<< HEAD
+=======
+    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}&lang=pt`, options)
+    .then(response => response.json())
+    .then(function(data) {
+        res.status(200).render('home', {
+            cidade: data.location.name,
+            pais: data.location.country,
+            descricao: data.current.condition.text,
+            icone: data.current.condition.icon,
+            temperatura: (data.current.temp_c).toFixed(0),
+            umidade: data.current.humidity,
+            atualizacao: (data.current.last_updated).slice(11)
+        })
+    });
+});
+>>>>>>> api
 
     fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}&lang=pt`, options)
         .then(response => response.json())
