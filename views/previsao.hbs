@@ -1,0 +1,26 @@
+<div class="container">
+    <div id="current">
+        <small>Agora em</small>
+        <h2 class="cityName">
+            {{cidade}}, {{pais}}
+        </h2>
+        <div class="icon_descr">
+            <img id="climaIcon" src="{{icone}}">
+            <p id="description">
+                {{descricao}}
+            </p>
+            <p class="temperature">{{temperatura}} ºC</p>
+        </div>
+        <span class="update"><small>Última atualização em {{atualizacao}}</small></span>
+    </div>
+    <div id="details">
+        <h2>Hoje</h2>
+        <div class="infoWeather">
+            <p><span class="temp_info"><i class="fa-solid fa-temperature-arrow-up"></i> Temperatura máxima:</span> {{temp_max}} ºC</p>
+            <p><span class="temp_info"><i class="fa-solid fa-temperature-arrow-down"></i> Temperatura mínima:</span> {{temp_min}} ºC</p>
+            <p><span class="temp_info"><i class="fa-solid fa-droplet"></i> Precipitação:</span> {{precipitacao}} mm</p>
+            <p><span class="temp_info"><i class="fa-solid fa-percent"></i> Umidade do ar:</span> {{umidade}} %</p>
+            <p><span class="temp_info"><i class="fa-solid fa-wind"></i> Vento:</span> {{vento}} km/h</p>
+        </div>
+    </div>
+</div>
