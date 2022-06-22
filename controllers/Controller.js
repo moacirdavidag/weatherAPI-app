@@ -10,7 +10,7 @@ const HOME = ((req, res) => {
         mode: 'cors',
         cache: 'default'
     }
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}`, options)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}&lang=pt`, options)
     .then(response => response.json())
     .then(function(data) {
         res.status(200).render('home', {
