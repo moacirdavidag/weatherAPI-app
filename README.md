@@ -8,7 +8,7 @@ O **WeatherApp** é um aplicativo que consome a API grátis [**WeatherApi**](htt
 O app foi feito em JavaScript, com o auxílio de Node.Js e da biblioteca Express. 
 ## Features
 - Clima atual da cidade pesquisada ✔️;
-- Previsão do tempo mais detalhada (em implementação) 🚧;
+- Previsão do tempo mais detalhada (em implementação) ✔️;
 - Previsão do tempo para os próximos dias (em implementação) 🚧;
 - Responsividade (a ser implementado) 🔴; 
 
