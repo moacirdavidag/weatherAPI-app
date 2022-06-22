@@ -1,5 +1,6 @@
 <div class="weather">
     <div id="localInfo">
+        <small>Agora em</small>
         <h2 class="cityName">
             {{cidade}}, {{pais}}
         </h2>
@@ -15,6 +16,7 @@
         <div class="info">
             <p><span class="temp_info"><i class="fa-solid fa-droplet"></i> Umidade do ar:</span> {{umidade}} %</p>
         </div>
+        <a href="/previsao/{{cidade}}/"><div class="previsao_detalhada">Ver previsão detalhada</div></a>
         <span class="update"><small>Última atualização em {{atualizacao}}</small></span>
     </div>
 </div>
