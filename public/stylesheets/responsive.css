@@ -1,0 +1,73 @@
+@media (max-width: 720px) {
+    
+
+    header #logo h1 {
+        font-size: 1.2rem;
+    }
+
+    header #search #input_search {
+        width: 200px;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    #input_search::placeholder {
+        font-size: 12px;
+    }
+
+    #search_icon {
+        left: 175px;
+    }
+
+    .weather {
+        margin: 30px auto;
+        width: 90vw;
+    }
+
+    body footer {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    #current {
+        margin-top: 30px;
+        width: 90vw;
+        height: 300px;
+    }
+
+    #details {
+        padding: 30px 30px;
+        margin-top: 5px;
+        width: 90vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #details .infoWeather {
+        width: 100%;
+    }
+
+    .infoWeather p {
+        padding: 5px;
+    }
+
+}
+
+@media screen and (min-width: 720px) {
+    
+    .weather {
+        width: 80vw;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    
+    .weather {
+        width: 60vw;
+    }
+
+}
