@@ -10,7 +10,7 @@ O app foi feito em JavaScript, com o auxílio de Node.Js e da biblioteca Express
 - Clima atual da cidade pesquisada ✔️;
 - Previsão do tempo mais detalhada (em implementação) ✔️;
 - Previsão do tempo para os próximos dias (em implementação) 🚧;
-- Responsividade (a ser implementado) 🔴; 
+- Responsividade (em implementação) ✔️; 
 
 ## Como usar
 Dê um ``git clone`` no repositório, em seguida instale as dependências do projeto utilizando o comando ``npm i`` e crie um arquivo .env com as seguintes configurações:
