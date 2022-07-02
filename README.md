@@ -9,7 +9,7 @@ O app foi feito em JavaScript, com o auxílio de Node.Js e da biblioteca Express
 ## Features
 - Clima atual da cidade pesquisada ✔️;
 - Previsão do tempo mais detalhada (em implementação) ✔️;
-- Previsão do tempo para os próximos dias (em implementação) 🚧;
+- Previsão do tempo para os próximos dias (em implementação) ✔️;
 - Responsividade (em implementação) ✔️; 
 
 ## Como usar
