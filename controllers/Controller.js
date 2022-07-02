@@ -11,7 +11,7 @@ const HOME = ((req, res) => {
         cache: 'default'
     }
   
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}&lang=pt`, options)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${city}&days=10&lang=pt`, options)
         .then(response => response.json())
         .then(function (data) {
             res.status(200).render('home', {
@@ -21,7 +21,7 @@ const HOME = ((req, res) => {
                 icone: data.current.condition.icon,
                 temperatura: (data.current.temp_c).toFixed(0),
                 umidade: data.current.humidity,
-                atualizacao: (data.current.last_updated).slice(11)
+                atualizacao: (data.current.last_updated).slice(11),
             })
         }).catch((e) => {
             res.status(400).render('error');
@@ -36,7 +36,7 @@ const PREVISAO = ((req, res) => {
         mode: 'cors',
         cache: 'default'
     }
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY}&q=${city}&lang=pt`, options)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY}&q=${city}&lang=pt&days=10`, options)
     .then(response => response.json())
     .then(function(data) {
         res.status(200).render('previsao', {
@@ -50,7 +50,8 @@ const PREVISAO = ((req, res) => {
             precipitacao: data.forecast.forecastday[0].day.totalprecip_mm,
             vento: data.forecast.forecastday[0].day.maxwind_kph,
             umidade: data.current.humidity,
-            atualizacao: (data.current.last_updated).slice(11)
+            atualizacao: (data.current.last_updated).slice(11),
+            previsao: data.forecast.forecastday
         })
     });
 });
