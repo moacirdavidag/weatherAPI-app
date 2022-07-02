@@ -54,6 +54,19 @@
         padding: 5px;
     }
 
+    .day {
+        font-size: 1rem;
+    }
+
+    .flex-details {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #map {
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width: 720px) {

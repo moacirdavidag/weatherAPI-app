@@ -23,6 +23,9 @@
                 <p><span class="temp_info"><i class="fa-solid fa-percent"></i> Umidade do ar:</span> {{umidade}} %</p>
                 <p><span class="temp_info"><i class="fa-solid fa-wind"></i> Vento:</span> {{vento}} km/h</p>
             </div>
+            <div id="map">
+                .
+            </div>
         </div>
     </div>
 </div>
@@ -45,3 +48,13 @@
             </div>
         {{/each}}
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly" defer></script>
+<script>
+    let map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: {{latitude}}, lng: {{longitude}} },
+            zoom: 12
+        });
+    }
+</script>

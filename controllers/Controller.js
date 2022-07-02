@@ -51,6 +51,8 @@ const PREVISAO = ((req, res) => {
             vento: data.forecast.forecastday[0].day.maxwind_kph,
             umidade: data.current.humidity,
             atualizacao: (data.current.last_updated).slice(11),
+            latitude: data.location.lat,
+            longitude: data.location.lon,
             previsao: data.forecast.forecastday
         })
     });

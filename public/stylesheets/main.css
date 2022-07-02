@@ -170,6 +170,12 @@ header #search #input_search_button:hover {
     justify-content: space-around;
 }
 
+.flex-details {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+}
+
 #current {
     margin: 60px auto;
     width: 25%;
